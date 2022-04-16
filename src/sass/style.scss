@@ -1,0 +1,15 @@
+@import 'libs/bootstrap-reboot.min';
+@import 'libs/fonts';
+
+body {
+    background: #6360FF;
+}
+* {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+@import 'blocks/main';

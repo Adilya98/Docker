@@ -1,0 +1,68 @@
+.main-page {
+    min-height: 100vh;
+    padding: 74px 0 117px 0;
+    background: url("../../img/main_bg.jpg") center (center / cover) no-repeat;
+    &__logo {
+        display: block;
+        margin: 0 auto;
+    }
+    &__title {
+        color: #FFFFFF;
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 42px;
+        text-align: center;
+        margin-top: 22px;
+        margin-bottom: 0;
+    }
+    &__descr {
+        color: #FCFCFF;
+        font-weight: 400;
+        font-size: 16px;
+        text-align: center;
+    }
+}
+
+.auth {
+    background: #E9E9FF;
+    min-height: 251px;
+    margin-top: 74px;
+    padding: 18px 13px 27px;
+    &__title {
+        color: #6360FF;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 36px;
+        text-align: center;
+    }
+    &__form {
+        margin: 50px auto 0;
+        width: 300px;
+        &_input {
+            position: relative;
+            background: #FCFCFF;
+            border-radius: 10px;
+            height: 50px;
+            border: none;
+            width: inherit;
+            margin: 0 auto;
+            padding: 9px 35px;
+            background-image: url('../../icons/lock.svg');
+            background-position: 10px center;
+            background-repeat: no-repeat;
+            
+        }
+        &_btn {
+            display: block;
+            margin: 17px auto 0;
+            background: #6360FF;
+            border-radius: 10px;
+            border: none;
+            padding: 15px 99px;
+            color: #FCFCFF;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 24px;
+        }
+    }
+}

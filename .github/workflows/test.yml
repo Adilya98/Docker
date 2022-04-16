@@ -7,15 +7,27 @@ on:
       - master
 
 jobs:
-  lint:
+#  lint:
+#    runs-on: ubuntu-latest
+#    strategy:
+#      matrix:
+#        node-version: [12.x]
+#    steps:
+#      - uses: actions/checkout@v2
+#      - uses: actions/setup-node@v1
+#        with:
+#          node-version: ${{matrix.node-version}}
+#      - run: npm ci
+#      - run: npm test
+  push_to_registry:
+    name: Push Docker
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [12.x]
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - name: Check out the repo
+        uses: actions/checkout@v2
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@8f9a66fc-e6a9-4f7b-ab0d-d91aacee5320
         with:
-          node-version: ${{matrix.node-version}}
-      - run: npm ci
-      - run: npm test
+          username: ${{secrets.DOCKER_USERNAME}}
+          password: ${{secrets.DOCKER_PASSWORD}}
